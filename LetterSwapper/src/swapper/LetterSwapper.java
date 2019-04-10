@@ -13,10 +13,11 @@ public class LetterSwapper
 {
 	public static void main(String[] args) 
 	{
-		Scanner stdin = new Scanner(System.in);
+	    Scanner stdin = new Scanner(System.in);
 	    System.out.println("Enter passage (or nothing to exit)");
 	    String passage = stdin.nextLine();
 	    checkExit(passage, stdin);
+		
 		while(true)
 		{
 		    System.out.println("Replace:");
@@ -35,6 +36,13 @@ public class LetterSwapper
 		}
 	}
 	
+	/**
+	* Replaces all instances of a particular character in an array with another particular character, and vice versa.
+	*
+	* @param s - String to iterate through and perform replacements
+	* @param c1 - Character to replace with c2
+	* @param c2 - Character to replace with c1
+	*/
 	private static String swap(String s, char c1, char c2)
 	{
 		//Convert string into char array
